@@ -123,9 +123,10 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 
 	.boxx
 	{
+		box-shadow: 5px 5px #666;
 		margin-top:40px ;
 		margin-left:300px ;
-		background:rgba(0,0,0,0.6) ;
+		background:rgba(0,0,0,0.35) ;
 		background-image:url(".jpg") ;
 		background-position: center;
 		padding:10px ;
@@ -183,7 +184,42 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 	{
   		float: right;
 	}
+	::placeholder 
+	{
+		font-style:italic;
+  		color: #191966;
+  		font-size: 25px;
+		
+	}
+	textarea 
+	{
+		background:rgba(255, 255, 179,0.3) ;
+		outline:none ;
+  		width: 80%;
+  		padding: 12px 20px;
+  		margin: 8px 0;
+  		display: inline-block;
+  		border-radius: 40px;
+		font-size: 19px;	
+	}
+	#put
+	{
+  		background-color:#0047b3;;
+  		color:black;
+		font-size:20 ;
+  		padding: 20px;
+  		border-radius: 25px;
+  		cursor: pointer;
+  		width:30%;
+  		opacity: 0.9;
+	}
 
+	#put:hover
+	{
+			outline: none;
+  		opacity: 1;
+		outline: none;
+	}
 </style>
 <body class="animation-area">
 <a style="text-decoration:none;"href=""><h1 class="fontt">XCH<span style="color:red;">ange</span></h1></a><img src="bmscex.png" alt="logo" style="width:40px;height:40px;" class="pos" >
@@ -200,9 +236,8 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 <?php foreach($queses as $ques)
 {?>
 	<div class="boxx">
-    <h4 style="color:red ;">Answer ID:    <?php echo htmlspecialchars($ques['answer_id']) ;?></h4>
-    <h4 style="color:red ;">answered by :-    <?php echo htmlspecialchars($ques['User_name']) ;?></h4>
-    <h4 style="color:blue ;"> <?php echo htmlspecialchars($ques['answers']) ;?></h4> 
+    <h4 style="color:#ffccff; font-size:25px ;"><i>Answered by :- </i>    <?php echo htmlspecialchars($ques['User_name']) ;?></h4>
+    <h4 style="font-size:15px ;font-family:Comic Sans MS, cursive, sans-serif;color:#ffffe6 ;"> <?php echo htmlspecialchars($ques['answers']) ;?></h4> 
 	</div>
 <?php } ?>
 
@@ -210,13 +245,13 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 <h1 style="color:#000080 ;font-size:100px;margin-bottom:10px ;margin-top:10px ;display:inline ;">  A  </h1>
 <h1 style="color:#000080 ;font-size:100px;margin-bottom:10px ;margin-top:10px ;display:inline ;">  N  </h1>
 <h1 style="color:#000080 ;font-size:100px;margin-bottom:10px ;margin-top:10px ;display:inline ;">  S  </h1>
-<h1 style="color:red ;font-size:100px;margin-bottom:10px ;margin-top:10px ;display:inline ;">  W  </h1>
-<h1 style="color:red ;font-size:100px;margin-bottom:10px ;margin-top:10px ;display:inline ;">  E  </h1>
-<h1 style="color:red ;font-size:100px;margin-bottom:10px ;margin-top:10px ;display:inline ;">  R  </h1>
+<h1 style="color:#990000 ;font-size:100px;margin-bottom:10px ;margin-top:10px ;display:inline ;">  W  </h1>
+<h1 style="color:#990000 ;font-size:100px;margin-bottom:10px ;margin-top:10px ;display:inline ;">  E  </h1>
+<h1 style="color:#990000 ;font-size:100px;margin-bottom:10px ;margin-top:10px ;display:inline ;">  R  </h1>
 <br>
 <form  action="answer.php" method="post" enctype="multipart/form-data" autocomplete="off" >
  <textarea id="place" placeholder="write your answer here" style="padding:100px ;" name="question" required ></textarea>   <br><br>
- <input type="submit"  value="post" name="post" />
+ <input id="put" type="submit"  value="POST" name="post" />
 </form>
 </div>
 
