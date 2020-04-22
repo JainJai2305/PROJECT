@@ -1,0 +1,6 @@
+create table ques(question_id bigint(20),questions text,User_name varchar(100),PRIMARY KEY (question_id)) ;
+
+create table ans(question_id bigint(20),answer_id int,User_name varchar(100),answers text,PRIMARY KEY (answer_id),FOREIGN KEY (question_id) REFERENCES ques(question_id)) ;
+
+//whosoever is accessing form the ques table first and then ans table 
+// values will be added to tha table as soon as the login table is connected
