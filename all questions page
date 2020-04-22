@@ -111,7 +111,7 @@ mysqli_free_result($result) ;
 	{
 		margin-top:40px ;
 		margin-left:300px ;
-		background:rgba(0,0,0,0.6) ;
+		background:rgba(128, 0, 128,0.5) ;
 		background-image:url(".jpg") ;
 		background-position: center;
 		padding:10px ;
@@ -147,9 +147,10 @@ mysqli_free_result($result) ;
 	button:active
 	{
 		outline: none;
-  		background-color: #001a66;
+  		background-color:#000d33;
   		box-shadow: 0 5px #666;
   		transform: translateY(4px);
+		outline: none;
 	}
 
 	.me
@@ -186,9 +187,8 @@ mysqli_free_result($result) ;
 {?>
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST" >
     <button class="boxx" name="submit" value="<?php echo htmlspecialchars($ques['question_id']) ;?>"type="submit">
-    <h4 style="color:red ;">Question ID:    <?php echo htmlspecialchars($ques['question_id']) ;?></h4>
-    <h4 style="color:red ;">asked by :-    <?php echo htmlspecialchars($ques['User_name']) ;?></h4>
-    <h4 style="color:blue ;"> <?php echo htmlspecialchars($ques['questions']) ;?></h4>
+    <h4 style="color:#000d33 ; font-family: Times New Roman, Times, serif;"><i>Asked by :- </i>    <?php echo htmlspecialchars($ques['User_name']) ;?></h4>
+    <h4 style="color:#ffffe6 ;font-family:Comic Sans MS, cursive, sans-serif"> <?php echo htmlspecialchars($ques['questions']) ;?></h4>
     </button>
     </form>  
 <?php } ?>
