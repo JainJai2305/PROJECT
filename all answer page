@@ -101,9 +101,10 @@ mysqli_free_result($result) ;
 
 	.boxx
 	{
+		box-shadow: 5px 5px #1a0033;
 		margin-top:40px ;
 		margin-left:300px ;
-		background:rgba(0,0,0,0.6) ;
+		background:rgba(102, 102, 255,0.3) ;
 		background-image:url(".jpg") ;
 		background-position: center;
 		padding:10px ;
@@ -147,7 +148,7 @@ mysqli_free_result($result) ;
 	.me
 	{
   		padding: 10px;
-		  font-size: 20px;
+		font-size: 20px;
   		width: 20px;
   		text-align: center;
   		text-decoration: none;
@@ -178,9 +179,8 @@ mysqli_free_result($result) ;
 <?php foreach($queses as $ques)
 {?>
 	<div class="boxx">
-    <h4 style="color:red ;">Answer ID:    <?php echo htmlspecialchars($ques['answer_id']) ;?></h4>
-    <h4 style="color:red ;">answered by :-    <?php echo htmlspecialchars($ques['User_name']) ;?></h4>
-    <h4 style="color:blue ;"> <?php echo htmlspecialchars($ques['answers']) ;?></h4> 
+    <h4 style="color:#4d0019 ; font-size:25px ;"><i>Answered by :-</i>    <?php echo htmlspecialchars($ques['User_name']) ;?></h4>
+    <h4 style="color:#f0f0f5 ;font-size:20px ; font-family:Palatino Linotype, Book Antiqua", Palatino, serif"> <?php echo htmlspecialchars($ques['answers']) ;?></h4> 
 	</div>
 <?php } ?>
 
