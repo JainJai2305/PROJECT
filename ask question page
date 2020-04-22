@@ -118,7 +118,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 		margin-top:50px ;
 		margin-bottom:100px ;
 		margin-left:300px ;
-		background:rgba(0,0,0,0.6) ;
+		background:rgba(255, 255, 179,0.4) ;
 		background-image:url(".jpg") ;
 		background-position: center;
 		padding:10px ;
@@ -127,13 +127,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 		border-radius:10% ;
 	}
 
-
-	::placeholder
-	{
-		color:black ;
-	}
-
-	button
+	#put
 	{
   		background-color:#0047b3;;
   		color:black;
@@ -145,7 +139,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
   		opacity: 0.9;
 	}
 
-	button:hover
+	#put:hover
 	{
 			outline: none;
   		opacity: 1;
@@ -177,6 +171,25 @@ if($_SERVER['REQUEST_METHOD']=='POST')
   		float: right;
 	}
 
+	::placeholder 
+	{
+		font-style:italic;
+  		color: #4d94ff;
+  		font-size: 25px;
+		
+	}
+	textarea 
+	{
+		background:rgba(255, 255, 179,0.4) ;
+		outline:none ;
+  		width: 80%;
+  		padding: 12px 20px;
+  		margin: 8px 0;
+  		display: inline-block;
+  		border-radius: 40px;
+		font-size: 19px;	
+	}
+
 </style>
 <body class="animation-area">
 <a style="text-decoration:none;"href=""><h1 class="fontt">XCH<span style="color:red;">ange</span></h1></a><img src="bmscex.png" alt="logo" style="width:40px;height:40px;" class="pos" >
@@ -193,12 +206,12 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 
 <div class="boxx">
 <h1 style="color:#000080 ;font-size:100px;margin-bottom:10px ;margin-top:10px ;display:inline ;">  A  </h1>
-<h1 style="color:red ;font-size:100px;margin-bottom:10px ;margin-top:10px ;display:inline ;">  S  </h1>
-<h1 style="color:red ;font-size:100px;margin-bottom:10px ;margin-top:10px ;display:inline ;">  K  </h1>
+<h1 style="color:#cc0000 ;font-size:100px;margin-bottom:10px ;margin-top:10px ;display:inline ;">  S  </h1>
+<h1 style="color:#cc0000 ;font-size:100px;margin-bottom:10px ;margin-top:10px ;display:inline ;">  K  </h1>
 <br>
 <form  action="questions.php" method="post" enctype="multipart/form-data" autocomplete="off" >
- <textarea id="place" placeholder="write your doubt here" style="padding:100px ;" name="question" required ></textarea>   <br><br>
- <input type="submit"  value="post" name="post" />
+ <textarea id="place" placeholder="Write your doubt here" style="padding:100px ;" name="question" required ></textarea>   <br><br>
+ <input id="put" type="submit"  value="POST" name="post" />
 </form>
 </div>
 
